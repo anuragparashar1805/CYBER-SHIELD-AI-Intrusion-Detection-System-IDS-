@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CYBER-SHIELD // AI-IDS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">⚡ CYBER-SHIELD AI // IDS</div>
+        <div class="status-pulse">SYSTEM ONLINE</div>
+    </header>
+
+    <main class="dashboard-grid">
+        <div class="card metric-card">
+            <h3>TOTAL PACKETS</h3>
+            <p id="total-packets">0</p>
+        </div>
+        <div class="card metric-card threat">
+            <h3>MALICIOUS THREATS DETECTED</h3>
+            <p id="threat-count">0</p>
+        </div>
+
+        <div class="card chart-container">
+            <h3>Live Threat Distribution</h3>
+            <canvas id="threatChart"></canvas>
+        </div>
+
+        <div class="card console-container">
+            <h3>Live Intrusion Event Log Management</h3>
+            <div id="log-console" class="console">
+                </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
